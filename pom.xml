@@ -225,34 +225,34 @@
 
     <name>conta</name>
     <description>Conta do Desenvolvimento de Sistemas Corporativos</description>
-    <url>https://github.com/persapiens/conta</url>
+    <url>https://github.com/wandesonpaiva/conta</url>
     <inceptionYear>2016</inceptionYear>
 
     <!-- Issue Managment -->
     <issueManagement>
         <system>Github</system>
-        <url>https://github.com/persapiens/conta/issues</url>
+        <url>https://github.com/wandesonpaiva/conta/issues</url>
     </issueManagement>
 
     <!-- SCM -->
     <scm>
-        <connection>scm:git:https://github.com/persapiens/conta.git</connection>
-        <developerConnection>scm:git:https://github.com/persapiens/conta.git</developerConnection>
-        <url>scm:git:https://github.com/persapiens/conta.git</url>
+        <connection>scm:git:https://github.com/wandesonpaiva/conta.git</connection>
+        <developerConnection>scm:git:https://github.com/wandesonpaiva/conta.git</developerConnection>
+        <url>scm:git:https://github.com/wandesonpaiva/conta.git</url>
         <tag>HEAD</tag>
     </scm>
 
     <!-- Organization -->
     <organization>
         <name>Persapiens</name>
-        <url>https://github.com/persapiens</url>
+        <url>https://github.com/wandesonpaiva</url>
     </organization>
     
     <developers>
         <developer>
-            <id>persapiens</id>
-            <name>Marcelo Romulo Fernandes</name>
-            <email>persapiens@gmail.com</email>
+            <id>wandesonpaiva</id>
+            <name>Wandeson Paiva</name>
+            <email>wandeson.jpaiva@gmail.com</email>
             <timezone>-3</timezone>
         </developer>
     </developers>
