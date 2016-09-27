@@ -2,7 +2,7 @@ Conta
 =====
 [![Heroku](http://heroku-badge.herokuapp.com/?app=contar&root=index.jsf)](https://wconta.herokuapp.com)
 [![Build Status](https://travis-ci.org/wandesonpaiva/conta.svg?branch=master)](https://travis-ci.org/wandesonpaiva/conta)
-[![Coverage Status](https://coveralls.io/repos/github/persapiens/conta/badge.svg?branch=master)](https://coveralls.io/github/persapiens/conta?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/wandesonpaiva/conta/badge.svg?branch=master)](https://coveralls.io/github/wandesonpaiva/conta?branch=master)
 [![Dependency Status](https://www.versioneye.com/user/projects/573c95dace8d0e00360bcee6/badge.svg?style=flat)](https://www.versioneye.com/user/projects/573c95dace8d0e00360bcee6)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
