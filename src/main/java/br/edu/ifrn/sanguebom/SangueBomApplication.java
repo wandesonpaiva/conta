@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package br.edu.ifrn.conta;
+package br.edu.ifrn.sanguebom;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -24,14 +24,14 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
  * @author Marcelo Fernandes
  */
 @SpringBootApplication
-public class ContaApplication {
+public class SangueBomApplication {
 
-	protected ContaApplication() {
+	protected SangueBomApplication() {
 	}
 
 	public static void main(String[] args) {
 		new SpringApplicationBuilder()
-			.sources(ContaApplication.class)
+			.sources(SangueBomApplication.class)
 			.run(args);
 	}
 }

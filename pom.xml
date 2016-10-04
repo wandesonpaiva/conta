@@ -224,7 +224,7 @@
     </profiles>
 
     <name>sanguebom</name>
-    <description>Conta do Desenvolvimento de Sistemas Corporativos</description>
+    <description>Aplicação para controle de estoque sanguíneo de hospitais</description>
     <url>https://github.com/wandesonpaiva/sanguebom</url>
     <inceptionYear>2016</inceptionYear>
 
@@ -253,6 +253,18 @@
             <id>wandesonpaiva</id>
             <name>Wandeson Paiva</name>
             <email>wandeson.jpaiva@gmail.com</email>
+            <timezone>-3</timezone>
+        </developer>
+        <developer>
+            <id>gilbelan</id>
+            <name>Gil Belan Santos</name>
+            <email>gilbelangeo@gmail.com</email>
+            <timezone>-3</timezone>
+        </developer>
+        <developer>
+            <id>luisdeol</id>
+            <name>Luis Felipe de Oliveira Mesa</name>
+            <email>luisfelipekai@gmail.com</email>
             <timezone>-3</timezone>
         </developer>
     </developers>
