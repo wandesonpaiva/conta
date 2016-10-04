@@ -23,7 +23,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes = ContaApplication.class)
+@SpringBootTest(classes = SangueBomApplication.class)
 public class SangueBomApplicationIT {
 
 	@Test
