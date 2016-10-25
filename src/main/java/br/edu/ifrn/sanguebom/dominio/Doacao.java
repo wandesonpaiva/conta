@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.Singular;
 import lombok.ToString;
+import java.util.Date;
 
 
 @Getter
@@ -25,7 +26,7 @@ public class Doacao implements Comparable<Doacao> {
 
 	private Usuario doador;
 	private Usuario receptor;
-	//private Date data;
+	private Date data;
 	private int quantidade;
 	
 

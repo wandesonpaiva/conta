@@ -175,14 +175,13 @@
                             <ignore>br.edu.ifrn.sanguebom.dominio.Q*</ignore>
                         </ignores>
                         <excludes>
-                            <exclude>br/edu/ifrn/sanguebom/dominio/QCategoria.class</exclude>
-                            <exclude>br/edu/ifrn/sanguebom/dominio/QConta.class</exclude>
-                            <exclude>br/edu/ifrn/sanguebom/dominio/QContaCredito.class</exclude>
-                            <exclude>br/edu/ifrn/sanguebom/dominio/QContaDebito.class</exclude>
-                            <exclude>br/edu/ifrn/sanguebom/dominio/QContaPatrimonio.class</exclude>
-                            <exclude>br/edu/ifrn/sanguebom/dominio/QDono.class</exclude>
-                            <exclude>br/edu/ifrn/sanguebom/dominio/QLancamento.class</exclude>
-                            <exclude>br/edu/ifrn/sanguebom/dominio/QValorInicialDoDonoNaContaPatrimonio.class</exclude>
+                            <exclude>br/edu/ifrn/sanguebom/dominio/Contato.class</exclude>
+                            <exclude>br/edu/ifrn/sanguebom/dominio/Instituicao.class</exclude>
+                            <exclude>br/edu/ifrn/sanguebom/dominio/Estoque.class</exclude>
+                            <exclude>br/edu/ifrn/sanguebom/dominio/Usuario.class</exclude>
+                            <exclude>br/edu/ifrn/sanguebom/dominio/Doador.class</exclude>
+                            <exclude>br/edu/ifrn/sanguebom/dominio/Endereco.class</exclude>
+                            <exclude>br/edu/ifrn/sanguebom/dominio/Doacao.class</exclude>
                         </excludes>
                     </instrumentation>
                 </configuration>            

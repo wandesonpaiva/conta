@@ -30,7 +30,18 @@ public class Estoque implements Comparable<Estoque> {
 	@Override
 	public int compareTo(Estoque o) {
 		int result = 0;
-		
+		if (this.tipo != null && o.tipo != null){
+			result = this.tipo.compareTo(o.tipo);
+		} else if (this.tipo == null && o.tipo == null) {
+			result = 0;
+		}
+		else if (this.tipo == null) {
+			result = -1;
+		}
+		else {
+			result = +1;
+		}
+
 		return result;
 	}
 
