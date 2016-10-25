@@ -13,6 +13,10 @@ import lombok.Setter;
 import lombok.Singular;
 import lombok.ToString;
 
+/**
+ * Contato entity.
+ * @author Wandeson Paiva
+ */
 
 @Getter
 @Setter
