@@ -30,4 +30,12 @@ public class Usuario implements Comparable<Usuario> {
 	private Contato contato;
 
 
+	@Override
+	public int compareTo(Usuario o) {
+		int result = 0;
+		
+		return result;
+	}
+
+
 }

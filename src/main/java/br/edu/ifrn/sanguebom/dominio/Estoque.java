@@ -26,4 +26,12 @@ public class Estoque implements Comparable<Estoque> {
 	private String tipo;
 	private float quantidade;
 
+
+	@Override
+	public int compareTo(Estoque o) {
+		int result = 0;
+		
+		return result;
+	}
+
 }

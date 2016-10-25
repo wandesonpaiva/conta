@@ -33,4 +33,11 @@ public class Endereco implements Comparable<Endereco> {
 	private int cep;
 
 
+	@Override
+	public int compareTo(Endereco o) {
+		int result = 0;
+		
+		return result;
+	}
+
 }

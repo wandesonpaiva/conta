@@ -24,7 +24,12 @@ import lombok.ToString;
 public class Instituicao implements Comparable<Instituicao> {
 
 	private Estoque estoque;
-	
 
+	@Override
+	public int compareTo(Instituicao o) {
+		int result = 0;
+		
+		return result;
+	}
 
 }

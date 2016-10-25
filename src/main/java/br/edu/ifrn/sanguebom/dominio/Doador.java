@@ -26,5 +26,11 @@ public class Doador implements Comparable<Doador> {
 	private String tipoSanguineo;
 	
 
+	@Override
+	public int compareTo(Doador o) {
+		int result = 0;
+		
+		return result;
+	}
 
 }

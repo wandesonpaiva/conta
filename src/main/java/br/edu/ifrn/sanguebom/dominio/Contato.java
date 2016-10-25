@@ -27,4 +27,11 @@ public class Contato implements Comparable<Contato> {
 	private String email;
 
 
+	@Override
+	public int compareTo(Contato o) {
+		int result = 0;
+		
+		return result;
+	}
+
 }

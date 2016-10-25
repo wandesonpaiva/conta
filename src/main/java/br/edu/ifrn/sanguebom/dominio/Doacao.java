@@ -25,9 +25,15 @@ public class Doacao implements Comparable<Doacao> {
 
 	private Usuario doador;
 	private Usuario receptor;
-	private Date data;
+	//private Date data;
 	private int quantidade;
 	
 
+	@Override
+	public int compareTo(Doacao o) {
+		int result = 0;
+		
+		return result;
+	}
 
 }
