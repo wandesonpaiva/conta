@@ -28,7 +28,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * Doacao entity.
+ * Transfusao entity.
  * @author Wandeson Paiva
  */
 
@@ -39,20 +39,19 @@ import lombok.ToString;
 @Builder
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class Doacao implements Comparable<Doacao> {
+public class Transfusao implements Comparable<Transfusao> {
 
-	private Usuario doador;
 	private Usuario receptor;
 	private Date data;
 	private int quantidade;
 
 	@Override
-	public int compareTo(Doacao d) {
+	public int compareTo(Transfusao t) {
 		int result = 0;
-		if (this.data != null && d.data != null) {
-			result = this.data.compareTo(d.data);
+		if (this.data != null && t.data != null) {
+			result = this.data.compareTo(t.data);
 		}
-		else if (d.data == null) {
+		else if (t.data == null) {
 			result = 1;
 		}
 		else {
