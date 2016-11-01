@@ -36,14 +36,14 @@ public class TransfusaoTests {
 
 	@Test
 	public void TransfusaoIgual() {
-		assertThat(Transfusao.builder.receptor(Usuario.builder().nome(NOME2).email(EMAIL2).build()).data(data1).quantidade(500).build())
+		assertThat(Transfusao.builder().receptor(Usuario.builder().nome(NOME2).email(EMAIL2).build()).data(data1).quantidade(500).build())
 			.isEqualTo(Transfusao.builder().receptor(Usuario.builder().nome(NOME2).email(EMAIL2).build()).data(data1).quantidade(500).build());
 	}
 
 	@Test
 	public void TransfusaoDiferente() {
-		assertThat(Transfusao.builder.receptor(Usuario.builder().nome(NOME2).email(EMAIL2).build()).data(data1).quantidade(500).build())
-			.isNotEqualTo(Transfusao.builder.receptor(Usuario.builder().nome(NOME1).email(EMAIL1).build()).data(data2).quantidade(800).build());
+		assertThat(Transfusao.builder().receptor(Usuario.builder().nome(NOME2).email(EMAIL2).build()).data(data1).quantidade(500).build())
+			.isNotEqualTo(Transfusao.builder().receptor(Usuario.builder().nome(NOME1).email(EMAIL1).build()).data(data2).quantidade(800).build());
 	}
 
 	@Test
