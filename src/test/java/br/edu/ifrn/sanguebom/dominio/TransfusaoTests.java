@@ -19,7 +19,7 @@ package br.edu.ifrn.sanguebom.dominio;
 //import java.util.HashSet;
 //import java.util.Set;
 //import java.util.TreeSet;
-import.java.util.Date;
+import java.util.Date;
 
 import org.junit.Test;
 
