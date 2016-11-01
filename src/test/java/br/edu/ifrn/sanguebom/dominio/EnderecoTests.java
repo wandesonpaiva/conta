@@ -25,24 +25,29 @@ import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class EnderecoTests {
+	private static final String estado = "RN";
+	private static final String cidade1 = "Natal";
+	private static final String cidade2 = "Parnamirim";
+	private static final String bairro1 = "Potengi";
+	private static final String bairro2 = "Rosa dos ventos";
+
 	@Test
 	public void EnderecoIgual() {
-		assertThat(Endereco.builder().cidade("Natal").estado("RN").bairro("Potengi").build())
-			.isEqualTo(Endereco.builder().cidade("Natal").estado("RN").bairro("Potengi").build());	
+		assertThat(Endereco.builder().cidade(cidade1).estado(estado).bairro(bairro1).build())
+			.isEqualTo(Endereco.builder().cidade(cidade1).estado(estado).bairro(bairro1).build());
 	}
 
 	@Test
 	public void EnderecoDiferente() {
-		assertThat(Endereco.builder().cidade("Natal").estado("RN").bairro("Potengi").build())
-			.isNotEqualTo(Endereco.builder().cidade("Parnamirim").estado("RN").bairro("Rosa dos ventos").build())
+		assertThat(Endereco.builder().cidade(cidade1).estado(estado).bairro(bairro1).build())
+			.isNotEqualTo(Endereco.builder().cidade(cidade2).estado(estado).bairro(bairro2).build());
 	}
 	@Test
 	public void compareTo() {
 		Set<Endereco> enderecos = new TreeSet<>();
-		
-		Endereco endereco1 = Endereco.builder().cidade("Natal").estado("RN").bairro("Potengi").builder();
+		Endereco endereco1 = Endereco.builder().cidade(cidade1).estado(estado).bairro(bairro1).builder();
 		enderecos.add(endereco1);
-		Endereco endereco2 = Endereco.builder().cidade("Parnamirim").estado("RN").bairro("Rosa dos ventos").builder();
+		Endereco endereco2 = Endereco.builder().cidade(cidade2).estado(estado).bairro(bairro2).builder();
 		enderecos.add(endereco2);
 
 		assertThat(enderecos.iterator().next()).isEqualTo(endereco1);
