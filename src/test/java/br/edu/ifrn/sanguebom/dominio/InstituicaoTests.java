@@ -25,14 +25,27 @@ import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class InstituicaoTests {
+	private static final String NOME_LEGAL1 = "Casa Seilaoque do Sangue";
+	private static final String NOME_LEGAL2 = "Casa FulanoDeTal do Sangue";
+	
+	@Test
+	public void InstituicaoIgual() {
+		assertThat(Instituicao.builder().NomeLegal(NOME_LEGAL1).build()).endereco(Endereco.builder().cidade("Natal").estado("RN").bairro("Potengi").build()).build())
+			.isEqualTo(Instituicao.builder().NomeLegal(NOME_LEGAL1).build()).endereco(Endereco.builder().cidade("Natal").estado("RN").bairro("Potengi").build()).build());	
+	}
 
+	@Test
+	public void InstituicaoDiferente() {
+		assertThat(Instituicao.builder().NomeLegal(NOME_LEGAL1).endereco(Endereco.builder().cidade("Natal").estado("RN").bairro("Potengi").build()).build())
+			.isNotEqualTo(Instituicao.builder().NomeLegal(NOME_LEGAL2).endereco(Endereco.builder().cidade("Natal").estado("RN").bairro("Potengi").build()).build())
+	}
 	@Test
 	public void compareTo() {
 		Set<Instituicao> instituicoes = new TreeSet<>();
 
-		Instituicao instituicao1 = Instituicao.builder().endereco(Endereco.builder().cidade("Natal").estado("RN").bairro("Potengi").builder()).build();
+		Instituicao instituicao1 = Instituicao.builder().NomeLegal(NOME_LEGAL1).endereco(Endereco.builder().cidade("Natal").estado("RN").bairro("Potengi").build()).build();
 		instituicoes.add(instituicao1);
-		Instituicao instituicao2 = Instituicao.builder().endereco(Endereco.builder().cidade("Parnamirim").estado("RN").bairro("Rosa dos ventos").builder()).build();
+		Instituicao instituicao2 = Instituicao.builder().NomeLegal(NOME_LEGAL2).endereco(Endereco.builder().cidade("Parnamirim").estado("RN").bairro("Rosa dos ventos").build()).build();
 		instituicoes.add(instituicao2);
 
 		assertThat(instituicoes.iterator().next()).isEqualTo(instituicao1);

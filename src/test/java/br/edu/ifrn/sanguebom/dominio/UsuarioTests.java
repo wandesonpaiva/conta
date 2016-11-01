@@ -25,13 +25,29 @@ import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class UsuarioTests {
+	private static final String NOME1 = "WANDESON PAIVA";
+	private static final String NOME2 = "PEDRO LUCAS";
+	private static final String EMAIL1 = "wandeson.jpaiva@gmail.com";
+	private static final String EMAIL2 = "pedro.lucas@gmail.com";
+	
+	@Test
+	public void UsuarioIgual() {
+		assertThat(Usuario.builder().nome(NOME1).build())
+			.isEqualTo(Usuario.builder().nome(NOME1).build());
+	}
 
+	@Test
+	public void UsuarioDiferente() {
+		assertThat(Usuario.builder().nome(NOME1).build())
+			.isNotEqualTo(Usuario.builder().nome(NOME2).build());
+	}
+	
 	@Test
 	public void compareTo() {
 		Set<Usuario> usuarios = new TreeSet<>();		
-		Usuario usuario1 = Usuario.builder().nome("Wandeson Paiva").email("wandeson.jpaiva@gmail.com").build();
+		Usuario usuario1 = Usuario.builder().nome(NOME1).email(EMAIL1).build();
 		usuarios.add(usuario1);
-		Usuario usuario2 = Usuario.builder().nome("Pedro Lucas").email("pedro.lucas@gmail.com").build();
+		Usuario usuario2 = Usuario.builder().nome(NOME1).email(EMAIL1).build();
 		usuarios.add(usuario2);
 
 		assertThat(usuarios.iterator().next()).isEqualTo(usuario2);

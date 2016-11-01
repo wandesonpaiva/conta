@@ -25,7 +25,17 @@ import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class EnderecoTests {
+	@Test
+	public void EnderecoIgual() {
+		assertThat(Endereco.builder().cidade("Natal").estado("RN").bairro("Potengi").build())
+			.isEqualTo(Endereco.builder().cidade("Natal").estado("RN").bairro("Potengi").build());	
+	}
 
+	@Test
+	public void EnderecoDiferente() {
+		assertThat(Endereco.builder().cidade("Natal").estado("RN").bairro("Potengi").build())
+			.isNotEqualTo(Endereco.builder().cidade("Parnamirim").estado("RN").bairro("Rosa dos ventos").build())
+	}
 	@Test
 	public void compareTo() {
 		Set<Endereco> enderecos = new TreeSet<>();
