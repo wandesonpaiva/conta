@@ -43,7 +43,8 @@ public class Instituicao implements Comparable<Instituicao> {
 
 	private Set<Doacao> doacoes;
 	private Endereco endereco;
-
+	private String NomeLegal;
+	
 	@Override
 	public int compareTo(Instituicao i) {
 		int result = 0;
