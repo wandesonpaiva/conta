@@ -32,14 +32,14 @@ public class DoacaoTests {
 
 	@Test
 	public void DoacaoIgual() {
-		assertThat(Doacao.builder().doador(Usuario.builder().nome(NOME1).email(EMAIL1).build()).receptor(Usuario.builder().nome(NOME2).email(EMAIL2).build()).data("12/12/2016").build())
-			.isEqualTo(Doacao.builder().doador(Usuario.builder().nome(NOME1).email(EMAIL1).build()).receptor(Usuario.builder().nome(NOME2).email(EMAIL2).build()).data("12/12/2016").build());
+		assertThat(Doacao.builder().doador(Usuario.builder().nome(NOME1).email(EMAIL1).build()).receptor(Usuario.builder().nome(NOME2).email(EMAIL2).build()).data("12-12-2016").build())
+			.isEqualTo(Doacao.builder().doador(Usuario.builder().nome(NOME1).email(EMAIL1).build()).receptor(Usuario.builder().nome(NOME2).email(EMAIL2).build()).data("12-12-2016").build());
 	}
 
 	@Test
 	public void DoacaoDiferente() {
-		assertThat(Doacao.builder().doador(Usuario.builder().nome(NOME2).email(EMAIL2).build()).receptor(Usuario.builder().nome(NOME1).email(EMAIL1).build()).data("06/12/2016").build())
-			.isNotEqualTo(Doacao.builder().doador(Usuario.builder().nome(NOME1).email(EMAIL1).build()).receptor(Usuario.builder().nome(NOME2).email(EMAIL2).build()).data("12/12/2016").build());
+		assertThat(Doacao.builder().doador(Usuario.builder().nome(NOME2).email(EMAIL2).build()).receptor(Usuario.builder().nome(NOME1).email(EMAIL1).build()).data("06-12-2016").build())
+			.isNotEqualTo(Doacao.builder().doador(Usuario.builder().nome(NOME1).email(EMAIL1).build()).receptor(Usuario.builder().nome(NOME2).email(EMAIL2).build()).data("12-12-2016").build());
 	}
 	@Test
 	public void compareTo() {
