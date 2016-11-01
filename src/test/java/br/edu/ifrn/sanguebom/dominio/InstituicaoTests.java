@@ -16,10 +16,14 @@
 
 package br.edu.ifrn.sanguebom.dominio;
 //import java.util.HashSet;
+
 import java.util.Set;
 import java.util.TreeSet;
+
 import org.junit.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
+
 public class InstituicaoTests {
 
 	private static final String estado = "RN";
