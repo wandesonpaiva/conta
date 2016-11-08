@@ -26,6 +26,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+
 /**
  * Endereco entity.
  * @author Wandeson Paiva
@@ -40,11 +48,26 @@ import lombok.ToString;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Endereco implements Comparable<Endereco> {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ID_SEQUENCE")
+	private Long id;
+
+	@Column(nullable = false, unique = false)
 	private String rua;
+
+	@Column(nullable = false, unique = false)
 	private String numero;
+
+	@Column(nullable = false, unique = false)
 	private String bairro;
+
+	@Column(nullable = false, unique = false)
 	private String cidade;
+
+	@Column(nullable = false, unique = false)
 	private String estado;
+
+	@Column(nullable = false, unique = false)
 	private String cep;
 
 

@@ -25,6 +25,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+
 /**
  * Usuario entity.
  * @author Wandeson Paiva
@@ -39,11 +47,26 @@ import lombok.ToString;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Usuario implements Comparable<Usuario> {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ID_SEQUENCE")
+	private Long id;
+
+	@Column(nullable = false, unique = false)
 	private String nome;
+
+	@Column(nullable = false, unique = true)
 	private String email;
+
+	@Column(nullable = false, unique = false)
 	private String senha;
+
+	@Column(nullable = false, unique = false)
 	private String telefone;
+
+	@Column(nullable = false, unique = false)
 	private Endereco endereco;
+
+	@Column(nullable = false, unique = false)
 	private TipoSanguineo tiposanguineo;
 
 

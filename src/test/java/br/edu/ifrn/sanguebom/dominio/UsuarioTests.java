@@ -30,12 +30,12 @@ public class UsuarioTests {
 	private static final String EMAIL1 = "wandeson.jpaiva@gmail.com";
 	private static final String EMAIL2 = "pedro.lucas@gmail.com";
 	@Test
-	public void UsuarioIgual() {
+	public void usuarioIgual() {
 		assertThat(Usuario.builder().nome(NOME1).build())
 			.isEqualTo(Usuario.builder().nome(NOME1).build());
 	}
 	@Test
-	public void UsuarioDiferente() {
+	public void usuarioDiferente() {
 		assertThat(Usuario.builder().nome(NOME1).build())
 			.isNotEqualTo(Usuario.builder().nome(NOME2).build());
 	}

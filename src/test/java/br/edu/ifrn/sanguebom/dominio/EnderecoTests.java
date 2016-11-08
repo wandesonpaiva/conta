@@ -25,23 +25,62 @@ import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class EnderecoTests {
-	private static final String estado = "RN";
+	private static final String estado1 = "RN";
+	private static final String estado2 = "PB";
 	private static final String cidade1 = "Natal";
 	private static final String cidade2 = "Parnamirim";
 	private static final String bairro1 = "Potengi";
 	private static final String bairro2 = "Rosa dos ventos";
+	private static final String rua1 = "Florianopolis";
+	private static final String rua2 = "Blumenau";
+	private static final String numero1 = "2814";
+	private static final String numero2 = "2842";
+	private static final String cep1 = "59112250";
+	private static final String cep2 = "49112000"
+
 
 	@Test
-	public void EnderecoIgual() {
-		assertThat(Endereco.builder().cidade(cidade1).estado(estado).bairro(bairro1).build())
-			.isEqualTo(Endereco.builder().cidade(cidade1).estado(estado).bairro(bairro1).build());
+	public void enderecoIgual() {
+		assertThat(Endereco.builder().estado(estado1).cidade(cidade1).bairro(bairro1).rua(rua1).numero(numero1).cep(cep1).build())
+			.isEqualTo(Endereco.builder().estado(estado1).cidade(cidade1).bairro(bairro1).rua(rua1).numero(numero1).cep(cep1).build());
 	}
 
 	@Test
-	public void EnderecoDiferente() {
-		assertThat(Endereco.builder().cidade(cidade1).estado(estado).bairro(bairro1).build())
-			.isNotEqualTo(Endereco.builder().cidade(cidade2).estado(estado).bairro(bairro2).build());
+	public void estadoDiferente() {
+		assertThat(Endereco.builder().estado(estado1).cidade(cidade1).bairro(bairro1).rua(rua1).numero(numero1).cep(cep1).build())
+			.isNotEqualTo(Endereco.builder().estado(estado2).cidade(cidade1).bairro(bairro1).rua(rua1).numero(numero1).cep(cep1).build());
 	}
+
+	@Test
+	public void cidadeDiferente() {
+		assertThat(Endereco.builder().estado(estado1).cidade(cidade1).bairro(bairro1).rua(rua1).numero(numero1).cep(cep1).build())
+			.isNotEqualTo(Endereco.builder().estado(estado1).cidade(cidade2).bairro(bairro1).rua(rua1).numero(numero1).cep(cep1).build());
+	}
+
+	@Test
+	public void bairroDiferente() {
+		assertThat(Endereco.builder().estado(estado1).cidade(cidade1).bairro(bairro1).rua(rua1).numero(numero1).cep(cep1).build())
+			.isNotEqualTo(Endereco.builder().estado(estado1).cidade(cidade1).bairro(bairro2).rua(rua1).numero(numero1).cep(cep1).build());
+	}
+
+	@Test
+	public void ruaDiferente() {
+		assertThat(Endereco.builder().estado(estado1).cidade(cidade1).bairro(bairro1).rua(rua1).numero(numero1).cep(cep1).build())
+			.isNotEqualTo(Endereco.builder().estado(estado1).cidade(cidade1).bairro(bairro1).rua(rua2).numero(numero1).cep(cep1).build());
+	}
+
+	@Test
+	public void numeroDiferente() {
+		assertThat(Endereco.builder().estado(estado1).cidade(cidade1).bairro(bairro1).rua(rua1).numero(numero1).cep(cep1).build())
+			.isNotEqualTo(Endereco.builder().estado(estado1).cidade(cidade1).bairro(bairro1).rua(rua1).numero(numero2).cep(cep1).build());
+	}
+
+	@Test
+	public void cepDiferente() {
+		assertThat(Endereco.builder().estado(estado1).cidade(cidade1).bairro(bairro1).rua(rua1).numero(numero1).cep(cep1).build())
+			.isNotEqualTo(Endereco.builder().estado(estado1).cidade(cidade1).bairro(bairro1).rua(rua1).numero(numero1).cep(cep2).build());
+	}
+
 	@Test
 	public void compareTo() {
 		Set<Endereco> enderecos = new TreeSet<>();

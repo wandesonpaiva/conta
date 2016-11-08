@@ -34,13 +34,13 @@ public class DoacaoTests {
 	private Date data2 = new Date();
 
 	@Test
-	public void DoacaoIgual() {
+	public void doacaoIgual() {
 		assertThat(Doacao.builder().doador(Usuario.builder().nome(NOME1).email(EMAIL1).build()).receptor(Usuario.builder().nome(NOME2).email(EMAIL2).build()).data(data1).build())
 			.isEqualTo(Doacao.builder().doador(Usuario.builder().nome(NOME1).email(EMAIL1).build()).receptor(Usuario.builder().nome(NOME2).email(EMAIL2).build()).data(data1).build());
 	}
 
 	@Test
-	public void DoacaoDiferente() {
+	public void doacaoDiferente() {
 		assertThat(Doacao.builder().doador(Usuario.builder().nome(NOME2).email(EMAIL2).build()).receptor(Usuario.builder().nome(NOME1).email(EMAIL1).build()).data(data2).build())
 			.isNotEqualTo(Doacao.builder().doador(Usuario.builder().nome(NOME1).email(EMAIL1).build()).receptor(Usuario.builder().nome(NOME2).email(EMAIL2).build()).data(data1).build());
 	}

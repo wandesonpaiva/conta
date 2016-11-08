@@ -16,7 +16,7 @@
 
 package br.edu.ifrn.sanguebom.dominio;
 
-import java.util.Date;
+import java.util.Calendar;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -27,6 +27,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+
 /**
  * Doacao entity.
  * @author Wandeson Paiva
@@ -35,15 +43,19 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@EqualsAndHashCode
+@EqualsAndHashCode(of = {"doador", "data"})
 @Builder
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Doacao implements Comparable<Doacao> {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ID_SEQUENCE")
+	private Long id;
+
 	private Usuario doador;
 	private Usuario receptor;
-	private Date data;
+	private Calendar data;
 	private int quantidade;
 
 	@Override
