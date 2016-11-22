@@ -36,7 +36,7 @@ public class EnderecoTests {
 	private static final String numero1 = "2814";
 	private static final String numero2 = "2842";
 	private static final String cep1 = "59112250";
-	private static final String cep2 = "49112000"
+	private static final String cep2 = "49112000";
 
 
 	@Test
