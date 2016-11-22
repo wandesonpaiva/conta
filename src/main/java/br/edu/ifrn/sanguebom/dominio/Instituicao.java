@@ -18,6 +18,14 @@ package br.edu.ifrn.sanguebom.dominio;
 
 import java.util.Set;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -26,14 +34,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.SequenceGenerator;
 
 /**
  * Instituicao entity.
@@ -53,9 +53,11 @@ public class Instituicao implements Comparable<Instituicao> {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ID_SEQUENCE")
 	private Long id;
 
+	@OneToMany(mappedBy = "instituicao")
 	private Set<Doacao> doacoes;
 
-	@OneToOne @EnderecoId
+	@OneToOne
+	@JoinColumn(name = "endereco_id")
 	private Endereco endereco;
 
 	@Column(nullable = false, unique = false)

@@ -16,7 +16,17 @@
 
 package br.edu.ifrn.sanguebom.dominio;
 
-import java.util.Calendar;
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.ForeignKey;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -26,14 +36,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.SequenceGenerator;
 
 /**
  * Transfusao entity.
@@ -53,8 +55,15 @@ public class Transfusao implements Comparable<Transfusao> {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ID_SEQUENCE")
 	private Long id;
 
+	@ManyToOne
+	@JoinColumn(nullable = false, foreignKey = @ForeignKey(name = "TRANSFUSAO_RECEPTOR_ID_FK"))
 	private Usuario receptor;
-	private Calendar data;
+
+	@Temporal(TemporalType.DATE)
+	@Column(nullable = false)
+	private Date data;
+
+	@Column(nullable = false)
 	private int quantidade;
 
 	@Override
