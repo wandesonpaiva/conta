@@ -84,9 +84,9 @@ public class EnderecoTests {
 	@Test
 	public void compareTo() {
 		Set<Endereco> enderecos = new TreeSet<>();
-		Endereco endereco1 = Endereco.builder().cidade(cidade1).estado(estado).bairro(bairro1).build();
+		Endereco endereco1 = Endereco.builder().cidade(cidade1).estado(estado1).bairro(bairro1).build();
 		enderecos.add(endereco1);
-		Endereco endereco2 = Endereco.builder().cidade(cidade2).estado(estado).bairro(bairro2).build();
+		Endereco endereco2 = Endereco.builder().cidade(cidade2).estado(estado1).bairro(bairro2).build();
 		enderecos.add(endereco2);
 
 		assertThat(enderecos.iterator().next()).isEqualTo(endereco1);
