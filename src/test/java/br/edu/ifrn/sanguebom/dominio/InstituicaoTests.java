@@ -37,7 +37,7 @@ public class InstituicaoTests {
 	@Test
 	public void instituicaoIgual() {
 		assertThat(Instituicao.builder().nomeLegal(NOME_LEGAL1).endereco(Endereco.builder().cidade(cidade1).estado(estado).bairro(bairro1).build()).build())
-			.isNotEqualTo(Instituicao.builder().nomeLegal(NOME_LEGAL1).endereco(Endereco.builder().cidade(cidade1).estado(estado).bairro(bairro1).build()).build());
+			.isEqualTo(Instituicao.builder().nomeLegal(NOME_LEGAL1).endereco(Endereco.builder().cidade(cidade1).estado(estado).bairro(bairro1).build()).build());
 	}
 
 	@Test
@@ -63,5 +63,3 @@ public class InstituicaoTests {
 	}
 
 }
-
-

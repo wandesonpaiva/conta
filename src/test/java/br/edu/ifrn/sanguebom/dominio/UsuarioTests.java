@@ -36,8 +36,8 @@ public class UsuarioTests {
 	}
 	@Test
 	public void usuarioDiferente() {
-		assertThat(Usuario.builder().nome(NOME1).build())
-			.isNotEqualTo(Usuario.builder().nome(NOME2).build());
+		assertThat(Usuario.builder().email(EMAIL1).build())
+			.isNotEqualTo(Usuario.builder().email(EMAIL2).build());
 	}
 	@Test
 	public void compareTo() {
