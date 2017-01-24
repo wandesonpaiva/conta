@@ -19,6 +19,7 @@ package br.edu.ifrn.sanguebom.dominio;
 import java.util.Set;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -47,6 +48,7 @@ import lombok.ToString;
 @Builder
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
+@Entity
 public class Instituicao implements Comparable<Instituicao> {
 
 	@Id
