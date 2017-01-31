@@ -19,6 +19,7 @@ package br.edu.ifrn.sanguebom.dominio;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -49,6 +50,7 @@ import lombok.ToString;
 @Builder
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
+@Entity
 public class Doacao implements Comparable<Doacao> {
 
 	@Id
@@ -56,11 +58,11 @@ public class Doacao implements Comparable<Doacao> {
 	private Long id;
 
 	@ManyToOne
-	@JoinColumn(foreignKey = @ForeignKey(name = "DOACAO_DOADOR_ID_FK"))
+	@JoinColumn(foreignKey = @ForeignKey(name = "DOADOR_ID"))
 	private Usuario doador;
 
 	@ManyToOne
-	@JoinColumn(foreignKey = @ForeignKey(name = "DOACAO_RECEPTOR_ID_FK"))
+	@JoinColumn(foreignKey = @ForeignKey(name = "RECEPTOR_ID"))
 	private Usuario receptor;
 
 	@Temporal(TemporalType.DATE)
