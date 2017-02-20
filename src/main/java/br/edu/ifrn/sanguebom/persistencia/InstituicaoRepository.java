@@ -13,15 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package persistencia;
+package br.edu.ifrn.sanguebom.persistencia;
 
-import br.edu.ifrn.sanguebom.dominio.Doacao;
-import org.springframework.data.querydsl.QueryDslPredicateExecutor;
+import br.edu.ifrn.sanguebom.dominio.Instituicao;
+import java.util.List;
+import org.springframework.data.repository.CrudRepository;
 
 /**
  *
  * @author luisdeolpy
  */
-public interface DoacaoRepository extends QueryDslPredicateExecutor<Doacao> {
-    
+
+public interface InstituicaoRepository extends CrudRepository<Instituicao, Long>{
+    List<Instituicao> findByNomeLegal(String nomeLegal);
 }

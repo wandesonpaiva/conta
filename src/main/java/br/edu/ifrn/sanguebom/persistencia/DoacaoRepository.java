@@ -13,19 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package persistencia;
+package br.edu.ifrn.sanguebom.persistencia;
 
-import br.edu.ifrn.sanguebom.dominio.TipoSanguineo;
-import br.edu.ifrn.sanguebom.dominio.Usuario;
-import java.util.List;
-import org.springframework.data.jpa.repository.JpaRepository;
+import br.edu.ifrn.sanguebom.dominio.Doacao;
+import org.springframework.data.querydsl.QueryDslPredicateExecutor;
 
 /**
  *
  * @author luisdeolpy
  */
-public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
-    List<Usuario> findByTipoSanguineo(TipoSanguineo tiposanguineo);
-    List<Usuario> findByNome(String nome);
-    Usuario findById(Long id);
-}
+public interface DoacaoRepository extends QueryDslPredicateExecutor<Doacao> {}

@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 Persapiens.
+ * Copyright 2016-2016 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,17 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package persistencia;
 
-import br.edu.ifrn.sanguebom.dominio.Instituicao;
-import java.util.List;
-import org.springframework.data.repository.CrudRepository;
+package br.edu.ifrn.sanguebom;
+
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 
 /**
- *
- * @author luisdeolpy
+ * Classe main.
+ * @author Marcelo Fernandes
  */
 
-public interface InstituicaoRepository extends CrudRepository<Instituicao, Long>{
-    List<Instituicao> findByNomeLegal(String nomeLegal);
+public class SangueBomApplicationMain {
+
+	protected SangueBomApplicationMain() {
+	}
+
+	public static void main(String[] args) {
+		new SpringApplicationBuilder()
+			.sources(SangueBomApplication.class)
+			.run(args);
+	}
 }
