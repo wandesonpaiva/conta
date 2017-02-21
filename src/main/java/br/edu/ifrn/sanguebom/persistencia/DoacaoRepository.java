@@ -22,4 +22,4 @@ import org.springframework.data.querydsl.QueryDslPredicateExecutor;
  *
  * @author luisdeolpy
  */
-public interface DoacaoRepository extends QueryDslPredicateExecutor<Doacao> {}
+public interface DoacaoRepository extends QueryDslPredicateExecutor<Doacao>, DoacaoRepositoryCustom {}

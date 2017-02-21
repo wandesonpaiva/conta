@@ -2,7 +2,6 @@ package br.edu.ifrn.sanguebom.persistencia;
 
 
 import br.edu.ifrn.sanguebom.dominio.Endereco;
-import br.edu.ifrn.sanguebom.dominio.TipoSanguineo;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

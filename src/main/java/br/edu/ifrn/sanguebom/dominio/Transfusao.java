@@ -74,7 +74,7 @@ public class Transfusao implements Comparable<Transfusao> {
 		if (this.data != null && t.data != null) {
 			result = this.data.compareTo(t.data);
 		}
-		else if (t.data == null) {
+		else if (this.data == null) {
 			result = 1;
 		}
 		else {
